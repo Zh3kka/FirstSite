@@ -1,0 +1,325 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+{% block 'content' %}
+    <header class="header">
+        <div class="container">
+            {% include 'mainapp/include/inc__header__menu.html' %}
+            <div class="header__info">
+                <h1 class="header__title">
+                    Your <span class="header__title__span">website</span> starts here
+                </h1>
+                <p class="header__subtitle">
+                    Sketch is the home for your entire collaborative design process. From early ideas to pixel-perfect
+                    artwork, playable prototypes and developer handoff. It all starts here.
+                </p>
+                <div class="header__info__link hil">
+                    <a href="#" class="hil__link butn">Get started for free</a>
+                    <a href="#" class="menu__link">Watch the video</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <div class="img">
+                <img src="{% static 'img/main__top.png' %}" alt="">
+            </div>
+            <div class="company">
+                <h3 class="company__title">Trusted by innovative companies worldwide</h3>
+                <div class="company__img">
+                    <svg width="28"
+                         height="28"
+                         viewBox="0 0 28 28"
+                         fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.54533 0C0.69178 0 0 0.691675 0 1.54533V26.4547C0 27.3081 0.69178 28 1.54533 28H14.9556V17.157H11.3067V12.9312H14.9556V9.8148C14.9556 6.19822 17.1645 4.22894 20.3907 4.22894C21.9361 4.22894 23.2643 4.34403 23.6514 4.39544V8.17495L21.4138 8.17599C19.6592 8.17599 19.3195 9.00972 19.3195 10.2332V12.9312H23.5041L22.9592 17.157H19.3195V28H26.4547C27.3081 28 28 27.3081 28 26.4547V1.54533C28 0.691675 27.3081 0 26.4547 0H1.54533Z"
+                              fill="black"/>
+                    </svg>
+                    <svg width="77"
+                         height="25"
+                         viewBox="0 0 77 25"
+                         fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.94609 8.8289V11.469H16.3183C16.0035 15.1712 12.893 16.75 9.95688 16.75C6.20046 16.75 2.92253 13.8233 2.92253 9.7212C2.92253 5.72512 6.04723 2.64759 9.96513 2.64759C12.9879 2.64759 14.769 4.55569 14.769 4.55569L16.6358 2.64141C16.6358 2.64141 14.2397 9.39318e-10 9.86971 9.39318e-10C4.30498 -7.63191e-05 0 4.65064 0 9.67404C0 14.5964 4.04955 19.3962 10.0115 19.3962C15.2552 19.3962 19.0935 15.8392 19.0935 10.5792C19.0935 9.46956 18.9308 8.82822 18.9308 8.82822L9.94609 8.8289ZM26.291 6.91692C22.6043 6.91692 19.9622 9.77104 19.9622 13.0998C19.9622 16.4777 22.5249 19.3849 26.3344 19.3849C29.7829 19.3849 32.6082 16.7748 32.6082 13.1723C32.6082 9.04337 29.3218 6.91692 26.291 6.91692ZM26.3277 9.36561C28.1407 9.36561 29.8588 10.8171 29.8588 13.1559C29.8588 15.445 28.148 16.9378 26.3194 16.9378C24.3101 16.9378 22.725 15.3444 22.725 13.1377C22.725 10.9783 24.2905 9.36561 26.3277 9.36561ZM40.0555 6.91692C36.3687 6.91692 33.7266 9.77104 33.7266 13.0998C33.7266 16.4777 36.2893 19.3849 40.0988 19.3849C43.5473 19.3849 46.3726 16.7748 46.3726 13.1723C46.3726 9.04337 43.0862 6.91692 40.0555 6.91692ZM40.0921 9.36561C41.9051 9.36561 43.6232 10.8171 43.6232 13.1559C43.6232 15.445 41.9124 16.9378 40.0838 16.9378C38.0745 16.9378 36.4895 15.3444 36.4895 13.1377C36.4895 10.9783 38.0549 9.36561 40.0921 9.36561ZM53.5563 6.92348C50.1723 6.92348 47.5123 9.85836 47.5123 13.1525C47.5123 16.9048 50.5961 19.3931 53.4979 19.3931C55.2922 19.3931 56.2462 18.6878 56.9507 17.8783V19.1076C56.9507 21.2584 55.6319 22.5463 53.6413 22.5463C51.7183 22.5463 50.7537 21.1305 50.4185 20.327L47.999 21.3286C48.8573 23.1258 50.5853 25 53.6613 25C57.0259 25 59.5902 22.9015 59.5902 18.5003V7.29831H56.9507V8.35432C56.1391 7.48828 55.0292 6.92363 53.5563 6.92363V6.92348ZM53.8012 9.36722C55.4603 9.36722 57.1639 10.77 57.1639 13.1657C57.1639 15.6007 55.4639 16.9427 53.7645 16.9427C51.9605 16.9427 50.2818 15.4922 50.2818 13.1888C50.2818 10.7955 52.0252 9.36722 53.8011 9.36722H53.8012ZM71.3264 6.9086C68.1343 6.9086 65.4541 9.42347 65.4541 13.1343C65.4541 17.061 68.4415 19.3897 71.633 19.3897C74.2966 19.3897 75.9314 17.9468 76.907 16.6539L74.7308 15.22C74.166 16.0879 73.2219 16.9361 71.6463 16.9361C69.8765 16.9361 69.0627 15.9764 68.5585 15.0468L77 11.5783L76.5617 10.5618C75.7463 8.57131 73.844 6.90898 71.3267 6.90898L71.3264 6.9086ZM71.4363 9.30616C72.5866 9.30616 73.4144 9.91172 73.7659 10.6378L68.1286 12.971C67.8855 11.1646 69.6138 9.30616 71.4363 9.30616ZM61.4297 19.0197H64.2025V0.644707H61.4297V19.0197Z"
+                              fill="black"/>
+                    </svg>
+                    <svg width="46"
+                         height="24"
+                         viewBox="0 0 46 24"
+                         fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M33.2222 5.14286V0H46V5.14286H33.2222ZM24.7037 7.71429H29.8148V24H24.7037V7.71429ZM0 0V24H4.96914V0H0ZM8.09259 0V16.3373H13.0617V0H8.09259ZM16.1852 0V24H21.1543V0H16.1852ZM24.7037 0V5.14286H29.8148V0H24.7037ZM32.5123 7.66265V24H37.4815V7.66265H32.5123Z"
+                              fill="black"/>
+                    </svg>
+                    <svg width="67"
+                         height="28"
+                         viewBox="0 0 67 28"
+                         fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M66.8281 14.5239C66.8281 9.75944 64.5203 6 60.1094 6C55.68 6 53 9.75944 53 14.4867C53 20.0886 56.1639 22.9175 60.705 22.9175C62.9197 22.9175 64.5947 22.415 65.8603 21.7078V17.9856C64.5947 18.6183 63.1431 19.0092 61.3006 19.0092C59.4953 19.0092 57.8947 18.3764 57.69 16.1803H66.7908C66.7908 15.9383 66.8281 14.9706 66.8281 14.5239ZM57.6342 12.7558C57.6342 10.6528 58.9183 9.77806 60.0908 9.77806C61.2261 9.77806 62.4358 10.6528 62.4358 12.7558H57.6342ZM45.9842 6C44.1603 6 42.9878 6.85611 42.3364 7.45167L42.0944 6.29778H38V27.9983L42.6528 27.0119L42.6714 21.745C43.3414 22.2289 44.3278 22.9175 45.9656 22.9175C49.2969 22.9175 52.3306 20.2375 52.3306 14.3378C52.3119 8.94056 49.2411 6 45.9842 6ZM44.8675 18.8231C43.7694 18.8231 43.1181 18.4322 42.6714 17.9483L42.6528 11.0436C43.1367 10.5039 43.8067 10.1317 44.8675 10.1317C46.5611 10.1317 47.7336 12.03 47.7336 14.4681C47.7336 16.9619 46.5797 18.8231 44.8675 18.8231ZM32 4.78306L36.6714 3.77806V0L32 0.986389V4.78306ZM32 6H36.671V22.285H32V6ZM26.3178 7.5696L26.02 6.19237H22V22.4771H26.6528V11.4407C27.7508 10.0077 29.6119 10.2682 30.1889 10.4729V6.19237C29.5933 5.96904 27.4158 5.5596 26.3178 7.5696ZM17.5597 2L13.0186 2.96778L13 17.8753C13 20.6297 15.0658 22.6583 17.8203 22.6583C19.3464 22.6583 20.4631 22.3792 21.0772 22.0442V18.2661C20.4817 18.5081 17.5411 19.3642 17.5411 16.6097V10.0028H21.0772V6.03861H17.5411L17.5597 2ZM4.70861 11.0436C4.70861 10.3178 5.30417 10.0386 6.29056 10.0386C7.705 10.0386 9.49167 10.4667 10.9061 11.2297V6.85611C9.36139 6.24194 7.83528 6 6.29056 6C2.5125 6 0 7.97278 0 11.2669C0 16.4036 7.07222 15.5847 7.07222 17.7994C7.07222 18.6556 6.32778 18.9347 5.28556 18.9347C3.74083 18.9347 1.76806 18.3019 0.204722 17.4458V21.8753C1.93556 22.6197 3.685 22.9361 5.28556 22.9361C9.15667 22.9361 11.8181 21.0192 11.8181 17.6878C11.7994 12.1417 4.70861 13.1281 4.70861 11.0436Z"
+                              fill="black"/>
+                    </svg>
+                    <svg width="93"
+                         height="28"
+                         viewBox="0 0 93 28"
+                         fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M47.5886 22.2404H44.8249L40.0727 15.6682L35.2869 22.2404H32.5232L38.6572 13.7808L33.0288 5.99522H35.7924L40.0727 11.8934L44.3531 5.99522H47.1167L41.4546 13.7808L47.5886 22.2404ZM61.9461 17.623C61.9461 19.0386 61.4743 20.1845 60.5306 20.9934C59.5869 21.8023 58.2388 22.2404 56.4862 22.2404H48.903V14.9941H45.263L46.7797 12.9045H48.903V5.99522H56.1829C57.8343 5.99522 59.0814 6.39967 59.9577 7.17485C60.8339 7.95004 61.2721 8.99485 61.2721 10.2419C61.2721 11.7923 60.5643 13.0056 59.1488 13.7808C60.0588 14.1178 60.7328 14.6571 61.2047 15.2975C61.7102 15.9378 61.9461 16.7467 61.9461 17.623ZM51.3633 12.9382H56.0144C56.9581 12.9382 57.6658 12.736 58.1377 12.2978C58.6095 11.8934 58.8454 11.253 58.8454 10.4104C58.8454 9.70263 58.6095 9.12967 58.104 8.72523C57.6321 8.32078 56.9244 8.11856 56.0144 8.11856H51.3633V12.9382ZM59.4521 17.5556C59.4521 16.713 59.1825 16.0389 58.6769 15.6345C58.1714 15.1963 57.3962 14.9941 56.3851 14.9941H51.3633V20.0834H56.3514C57.3288 20.0834 58.104 19.8475 58.6432 19.443C59.1825 19.0049 59.4521 18.3645 59.4521 17.5556ZM78.6629 14.1178C78.6629 15.3649 78.4944 16.5445 78.1237 17.5556C77.753 18.5667 77.2137 19.4767 76.5059 20.2519C75.7645 21.0271 74.9219 21.6338 73.9782 22.0045C73.0345 22.4089 71.956 22.5775 70.7427 22.5775C69.5631 22.5775 68.4509 22.3752 67.5072 22.0045C66.5635 21.6001 65.7209 21.0271 64.9794 20.2519C64.238 19.4767 63.6987 18.5667 63.328 17.5556C62.9572 16.5445 62.7887 15.3649 62.7887 14.1178C62.7887 12.8708 62.9572 11.6912 63.328 10.68C63.6987 9.66893 64.238 8.72523 64.9794 7.95004C65.6872 7.17485 66.5298 6.60189 67.5072 6.19744C68.4509 5.8267 69.5631 5.62448 70.7427 5.62448C71.9223 5.62448 73.0008 5.8267 73.9782 6.19744C74.9219 6.56819 75.7982 7.17485 76.5059 7.95004C77.2137 8.72523 77.7867 9.66893 78.1237 10.68C78.4607 11.6912 78.6629 12.8371 78.6629 14.1178ZM65.3502 14.1178C65.3502 16.0389 65.8557 17.5556 66.8331 18.6678C67.8105 19.7801 69.0912 20.353 70.7427 20.353C72.3604 20.353 73.6749 19.7801 74.6523 18.6678C75.6297 17.5556 76.1015 16.0389 76.1015 14.1178C76.1015 12.1967 75.6297 10.6463 74.6523 9.53412C73.6749 8.42189 72.3604 7.84893 70.7427 7.84893C69.1249 7.84893 67.8105 8.42189 66.8331 9.53412C65.8557 10.68 65.3502 12.1967 65.3502 14.1178ZM86.4821 13.7808L92.1442 5.99522H89.3806L85.1003 11.8934L80.82 5.99522H78.0563L83.7184 13.7808L77.5844 22.2404H80.3481L85.1003 15.6682L89.8861 22.2404H92.6498L86.4821 13.7808ZM13.9126 11.2272C18.005 14.3348 24.9384 21.969 22.8415 24.1308C20.4401 26.2252 17.3286 27.475 13.9126 27.475C10.4966 27.475 7.35125 26.2252 4.98375 24.1308C2.853 21.969 9.82022 14.3348 13.8788 11.2609C13.8788 11.2272 13.9126 11.2272 13.9126 11.2272ZM13.9126 0.35022C11.1731 0.35022 8.90704 1.09336 6.84393 2.3432C6.81011 2.3432 6.81011 2.37698 6.81011 2.41076C6.81011 2.44454 6.84393 2.44454 6.87775 2.44454C9.51582 1.87029 13.5068 4.1335 13.8788 4.36996H13.9126H13.9464C14.3185 4.1335 18.3094 1.87029 20.9475 2.44454C20.9813 2.44454 21.0151 2.44454 21.0151 2.41076C21.0151 2.37698 21.0151 2.3432 20.9813 2.3432C18.9182 1.09336 16.6521 0.35022 13.9126 0.35022ZM4.40879 4.23484C4.37497 4.23484 4.37497 4.26862 4.34115 4.26862C1.87218 6.73451 0.35022 10.1462 0.35022 13.8957C0.35022 16.9696 1.39868 19.8409 3.12358 22.1041C3.12358 22.1379 3.1574 22.1379 3.19122 22.1379C3.22504 22.1379 3.22504 22.1041 3.19122 22.0703C2.14275 18.8613 7.45272 11.1258 10.1923 7.883L10.2261 7.84922C10.2261 7.81544 10.2261 7.81544 10.1923 7.81544C6.03222 3.69437 4.64554 4.1335 4.40879 4.23484ZM17.633 7.78166L17.5991 7.81544C17.5991 7.81544 17.5991 7.84922 17.633 7.84922C20.3725 11.092 25.6486 18.8275 24.634 22.0365V22.1041C24.6678 22.1041 24.7016 22.1041 24.7016 22.0703C26.4265 19.8071 27.475 16.9359 27.475 13.8619C27.475 10.1124 25.953 6.70073 23.4502 4.23484C23.4164 4.20106 23.4164 4.20106 23.3826 4.20106C23.1797 4.1335 21.793 3.69437 17.633 7.78166Z"
+                              fill="black"/>
+                    </svg>
+                </div>
+                <div class="main__info mi">
+                    <div class="mi__left">
+                        <img src="{% static 'img/mi__left.png' %}" alt="">
+                        <div class="mi__left__info">
+                            <p class="sketch">
+                                New in Sketch
+                            </p>
+                            <h2 class="mi__left__info__title">Collaborate in real-time</h2>
+                            <p class="mi__left__info__subtitle">
+                                Work together in the same document, at the same time, right inside the Mac app. With
+                                everyone (literally) on the same page, you can see everyone’s best ideas in one place —
+                                as soon as they have them.
+                            </p>
+                            <p class="discover">
+                                Discover real-time collaboration
+                            </p>
+                        </div>
+                    </div>
+                    <div class="millll">
+                        <div class="mi__right">
+                            <p class="sketch">
+                                design
+                            </p>
+                            <h2 class="mi__left__info__title">Tools that help your work shine</h2>
+                            <p class="mi__left__info__subtitle">
+                                With an intuitive interface, thoughtful features and all the power of a native macOS
+                                app,
+                                you can stay focused on creating incredible things — from pixel-perfect icons, to your
+                                next
+                                breakthrough product.
+                            </p>
+                            <p class="discover">
+                                Explore your design toolkit
+                            </p>
+                            <img src="{% static 'img/right.png' %}" alt="">
+                        </div>
+                        <div class="orange__sketch ok">
+                            <h3 class="ok__title">
+                                Even though I use Sketch every day, it still brings me joy. It continues to feel
+                                powerful
+                                and special, which makes doing my work even more enjoyable.
+                            </h3>
+                            <p class="ok__name">
+                                Mark Jardine
+                            </p>
+                            <p class="ok__prof">
+                                UI Designer at Tapbots
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="design__company">
+            <div class="design__company__container">
+                <img src="{% static 'img/designcompany.png' %}" alt="">
+                <div class="design__col">
+                    <div class="design__process">
+                        <p class="coll">
+                            Collaborate
+                        </p>
+                        <h2 class="mi__left__info__title">Open up the design process</h2>
+                        <p class="mi__left__info__subtitle">
+                            Get fast feedback from stakeholders, share prototypes for testing and give your developers
+                            everything they need for handoff. All using powerful, browser-based tools that your people
+                            can access for free.
+                        </p>
+                        <p class="discover">
+                            See collaboration in action
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="sketchs__and__bring">
+                <div class="sketchs">
+                    <h3 class="sketchs__title">
+                        Sketch’s Libraries, compatibility with industry tools, and community of plugins let our team
+                        build and scale a design system across multiple brands and platforms — which gives our users a
+                        better, more cohesive experience.
+                    </h3>
+                    <p class="sketchs__name">
+                        Luca Rager
+                    </p>
+                    <p class="sketchs__prof">
+                        Senior Software Engineer & Designer — Xbox Research & Design
+                    </p>
+                </div>
+                <div class="bring">
+                    <img src="{% static 'img/bring_fon.png' %}" alt="" class="bring__img">
+                    <p class="bring__work">
+                        Workspaces
+                    </p>
+                    <h2 class="bring__title">Bring people and projects together</h2>
+                    <p class="brint__subtitle">
+                        Keep all your documents together, in sync and available anywhere with your Workspace. Everyone
+                        gets the access they need, with full version history for every document. And it’s all included
+                        in your subscription — no need to pay for extra storage.
+                    </p>
+                    <p class="bring__text">
+                        Create your Workspace in minutes
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="scale__up">
+            <div class="container">
+                <div class="scale__someinfo">
+                    <div class="scale__info">
+                        <p class="scale__design">
+                            Design Systems
+                        </p>
+                        <h2 class="scale__title">Scale up, share instantly</h2>
+                        <p class="scale__subtitle">
+                            Lay the foundations for your product’s design system with reusable Styles and responsive
+                            Symbols
+                            that automatically scale to fit their content. Then share them effortlessly and update them
+                            everywhere in seconds.
+                        </p>
+                        <p class="scale__text">
+                            Sketch for design systems
+                        </p>
+                    </div>
+                    <img src="{% static 'img/scaleup__right.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="handoff__and__wiw">
+                <div class="handoff hf">
+                    <img src="{% static 'img/handoff without.png' %}" alt="">
+                    <p class="hf__work">
+                        Developer Handoff
+                    </p>
+                    <h2 class="hf__title">Handoff without hassle</h2>
+                    <p class="brint__subtitle">
+                        Invite developers to view, inspect and measure designs, in any browser, on any operating system.
+                        They can download pixel-perfect, production-ready assets — no Mac app or third-party plugins
+                        needed.
+                    </p>
+                    <p class="hf__text">
+                        Prepare for handoff
+                    </p>
+                </div>
+                <div class="when__i__was wiw">
+                    <h3 class="wiw__title">
+                        When I was redesigning LookUp, I relied on Symbols, Layer Styles and Text Styles to iterate
+                        faster and give a consistent experience. I was able to put together a design system that I still
+                        use today.
+                    </h3>
+                    <p class="wiw__name">
+                        Vidit Bhargava
+                    </p>
+                    <p class="wiw__prof">
+                        Designer & Developer of LookUp
+                    </p>
+                </div>
+            </div>
+            <div class="custom__workflow">
+                <ul class="menu flow">
+                    <li>
+                        <img src="{% static 'img/1.png' %}" alt="">
+                    </li>
+                    <li>
+                        <img src="{% static 'img/2.png' %}" alt="">
+                    </li>
+                    <li>
+                        <img src="{% static 'img/3.png' %}" alt="">
+                    </li>
+                    <li>
+                        <img src="{% static 'img/4.png' %}" alt="">
+                    </li>
+                    <li>
+                        <img src="{% static 'img/5.png' %}" alt="">
+                    </li>
+                    <li>
+                        <img src="{% static 'img/6.png' %}" alt="">
+                    </li>
+                </ul>
+                <div class="workflow wf">
+                    <p class="wf__ext">
+                        Extensions
+                    </p>
+                    <h2 class="wf__title">Customize your workflow</h2>
+                    <p class="wf__subtitle">
+                        Choose from hundreds of plugins, Assistants and integrations that let you do everything from
+                        animating interactions to making your designs more accessible. Still can’t find exactly what you
+                        need? Our open file system means it’s easy to build your own extensions.
+                    </p>
+                    <p class="wf__text">
+                        Browse 700+ extensions
+                    </p>
+                </div>
+            </div>
+            <div class="latest__news news">
+                <h3 class="news__info">Latest news</h3>
+                <div class="news__cards">
+                    <div class="news__card">
+                        <img src="{% static 'img/news1.png' %}" alt="" class="card__img">
+                        <p class="news__title">
+                            Behind the scenes: How we made the Sketch 2021 video
+                        </p>
+                        <p class="news__subtitle">
+                            15 July 2021
+                        </p>
+                    </div>
+                    <div class="news__card">
+                        <img src="{% static 'img/news2.png' %}" alt="" class="card__img">
+                        <p class="news__title">
+                            Welcome to Workspaces: Getting feedback and testing your designs
+                        </p>
+                        <p class="news__subtitle">
+                            13 July 2021
+                        </p>
+                    </div>
+                    <div class="news__card">
+                        <img src="{% static 'img/news3.png' %}" alt="" class="card__img">
+                        <p class="news__title">
+                            Welcome to Workspaces: Sharing your work
+                        </p>
+                        <p class="news__subtitle">
+                            6 July 2021
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="gerstarted">
+                <div class="getstarted__info">
+                    <svg width="32"
+                         height="29"
+                         viewBox="0 0 32 29"
+                         fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M0.156584 9.98085L6.56858 1.27685C6.63416 1.18804 6.71742 1.11376 6.8131 1.05868C6.90879 1.00361 7.01484 0.968941 7.12458 0.956855L15.6886 0.00485473C15.7471 -0.00161824 15.8061 -0.00161824 15.8646 0.00485473L24.4286 0.955855C24.5383 0.967941 24.6444 1.00261 24.7401 1.05768C24.8358 1.11276 24.919 1.18704 24.9846 1.27585L31.3976 9.98085C31.5049 10.127 31.5593 10.3052 31.5521 10.4864C31.5448 10.6675 31.4762 10.8408 31.3576 10.9779L16.2316 28.4699C16.1753 28.535 16.1056 28.5873 16.0272 28.6232C15.9489 28.659 15.8637 28.6776 15.7776 28.6776C15.6914 28.6776 15.6063 28.659 15.528 28.6232C15.4496 28.5873 15.3799 28.535 15.3236 28.4699L0.194584 10.9779C0.0760895 10.8407 0.00769721 10.6673 0.000611701 10.4862C-0.00647381 10.305 0.0481676 10.1269 0.155584 9.98085H0.156584ZM17.9826 2.57785L24.0296 8.28986C24.0882 8.34537 24.1622 8.38186 24.2419 8.39452C24.3216 8.40718 24.4033 8.39544 24.4762 8.36082C24.5492 8.3262 24.6099 8.27033 24.6505 8.20055C24.691 8.13077 24.7096 8.05035 24.7036 7.96986L24.4136 3.91585C24.4095 3.86626 24.4241 3.81693 24.4544 3.7775C24.4848 3.73807 24.5288 3.71137 24.5778 3.70262C24.6267 3.69387 24.6772 3.7037 24.7194 3.73019C24.7615 3.75667 24.7922 3.79792 24.8056 3.84585L26.1316 8.48785C26.1762 8.64416 26.2583 8.78723 26.3707 8.90468C26.4831 9.02212 26.6224 9.11039 26.7766 9.16185L29.6066 10.1049C29.6517 10.1197 29.6901 10.1501 29.7149 10.1907C29.7396 10.2313 29.7491 10.2793 29.7417 10.3263C29.7342 10.3732 29.7103 10.4159 29.6742 10.4468C29.638 10.4777 29.5921 10.4947 29.5446 10.4949H26.8246C26.6565 10.495 26.4911 10.5374 26.3438 10.6184C26.1964 10.6993 26.0719 10.816 25.9816 10.9579L18.5676 22.6079C18.5261 22.6714 18.4621 22.7169 18.3884 22.7351C18.3147 22.7533 18.2368 22.7429 18.1705 22.706C18.1042 22.6691 18.0543 22.6084 18.0309 22.5362C18.0076 22.464 18.0124 22.3856 18.0446 22.3169L23.3586 11.3569C23.403 11.2654 23.4234 11.1641 23.4179 11.0625C23.4125 10.961 23.3813 10.8625 23.3273 10.7763C23.2733 10.6901 23.1983 10.6191 23.1093 10.5699C23.0203 10.5206 22.9203 10.4948 22.8186 10.4949H8.73458C8.63289 10.4948 8.53285 10.5206 8.44387 10.5699C8.35489 10.6191 8.27988 10.6901 8.22589 10.7763C8.1719 10.8625 8.14071 10.961 8.13523 11.0625C8.12975 11.1641 8.15018 11.2654 8.19458 11.3569L13.5086 22.3169C13.542 22.3857 13.5478 22.4648 13.5248 22.5378C13.5018 22.6108 13.4517 22.6723 13.3849 22.7096C13.318 22.7469 13.2394 22.7573 13.1652 22.7386C13.091 22.7198 13.0267 22.6734 12.9856 22.6089L5.57158 10.9589C5.48134 10.8167 5.35667 10.6997 5.20913 10.6186C5.06158 10.5374 4.89595 10.4949 4.72758 10.4949H1.92458C1.87706 10.4947 1.83113 10.4777 1.79502 10.4468C1.7589 10.4159 1.73497 10.3732 1.72751 10.3263C1.72005 10.2793 1.72955 10.2313 1.7543 10.1907C1.77905 10.1501 1.81744 10.1197 1.86258 10.1049L4.77058 9.15985C4.92642 9.10908 5.06739 9.02078 5.18108 8.90273C5.29477 8.78468 5.37771 8.64049 5.42258 8.48285L6.74758 3.84585C6.76093 3.79792 6.79168 3.75667 6.83381 3.73019C6.87593 3.7037 6.92642 3.69387 6.97541 3.70262C7.0244 3.71137 7.06837 3.73807 7.09873 3.7775C7.12908 3.81693 7.14365 3.86626 7.13958 3.91585L6.84958 7.96986C6.84361 8.05035 6.86212 8.13077 6.9027 8.20055C6.94328 8.27033 7.00401 8.3262 7.07693 8.36082C7.14985 8.39544 7.23153 8.40718 7.31125 8.39452C7.39097 8.38186 7.46499 8.34537 7.52358 8.28986L13.5706 2.57785C13.6071 2.54096 13.6566 2.51972 13.7085 2.51863C13.7604 2.51754 13.8107 2.53669 13.8488 2.57201C13.8868 2.60734 13.9096 2.65608 13.9124 2.70793C13.9152 2.75978 13.8977 2.81068 13.8636 2.84985L9.80658 7.84285C9.759 7.90151 9.729 7.97243 9.72005 8.04742C9.71109 8.12241 9.72355 8.19841 9.75598 8.26661C9.78841 8.33482 9.83948 8.39245 9.9033 8.43284C9.96711 8.47324 10.0411 8.49473 10.1166 8.49485H21.4366C21.5121 8.49473 21.5861 8.47324 21.6499 8.43284C21.7137 8.39245 21.7648 8.33482 21.7972 8.26661C21.8296 8.19841 21.8421 8.12241 21.8331 8.04742C21.8242 7.97243 21.7942 7.90151 21.7466 7.84285L17.6896 2.84985C17.6555 2.81068 17.638 2.75978 17.6408 2.70793C17.6435 2.65608 17.6664 2.60734 17.7044 2.57201C17.7425 2.53669 17.7928 2.51754 17.8447 2.51863C17.8966 2.51972 17.946 2.54096 17.9826 2.57785Z"
+                              fill="black"/>
+                    </svg>
+                    <h2 class="getstarted__title">Get started for free</h2>
+                    <p class="getstarted__subtitle">
+                        Join over a million people using Sketch to create, collaborate and bring their ideas to life.
+                    </p>
+                    <p class="getstarted__text">
+                        Get started today with a 30-day free trial — no credit card required.
+                    </p>
+                    <button class="getstarted__btn">Start your trial</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    {% include 'mainapp/include/inc__footer__menu.html' %}
+</body>
+</html>
+{% endblock 'content' %}
